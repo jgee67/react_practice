@@ -1,9 +1,3 @@
-<h2>Appointments</h2>
-<%= form_for @appointment, remote: true do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :appt_time %>
-  <%= f.submit 'Make appointment' %>
-<% end %>
 <% @appointments.each do |a| %>
   <h3><%= a.title %></h3>
   <p><%= a.appt_time %></p>

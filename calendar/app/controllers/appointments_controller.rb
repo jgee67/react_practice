@@ -1,12 +1,12 @@
 class AppointmentsController < ApplicationController
   def index
-    @appointments = Appointment.order(appt_time: :asc)
     @appointment = Appointment.new
+    @appointments = Appointment.order(appt_time: :asc)
   end
 
   def create
     @appointment = Appointment.create(appointment_params)
-    redirect_to :root
+    @appointments = @appointments = Appointment.order(appt_time: :asc)
   end
 
   private
