@@ -1,0 +1,314 @@
+Started GET "/" for 127.0.0.1 at 2018-07-07 09:40:03 -1000
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "calendar" does not exist
+):
+  
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:683:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "calendar_test"[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (311.1ms)[0m  [1m[35mCREATE DATABASE "calendar_test" ENCODING = 'utf8'[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (115.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "calendar_test"[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (231.6ms)[0m  [1m[35mCREATE DATABASE "calendar_test" ENCODING = 'utf8'[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (228.7ms)[0m  [1m[35mCREATE DATABASE "calendar_development" ENCODING = 'utf8'[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "calendar_test" ENCODING = 'utf8'[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (27.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6069180551402911005)[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-07 19:56:57.016926"], ["updated_at", "2018-07-07 19:56:57.016926"]]
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6069180551402911005)[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-07-07 09:57:41 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 838ms (Views: 830.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:10:46 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1055ms (Views: 1047.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:12:52 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 461ms (Views: 459.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:15:07 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 267ms (Views: 260.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:17:19 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 667ms (Views: 665.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:42:47 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1288ms (Views: 1281.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6069180551402911005)[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateAppointments (20180707204415)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" bigserial primary key, "title" character varying, "appt_time" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180707204415_create_appointments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180707204415"]]
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6069180551402911005)[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:50:26 -1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:3: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <h3>a.title</h3> );@output_buf...
+...                              ^
+/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:4: unknown regexp option - h
+/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:4: unmatched close parenthesis: /h3> );@output_buffer.safe_append='
+  '.freeze;@output_buffer.append=( <h3>a.appt_time</
+/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+...er.append=( <h3>a.appt_time</h3> );@output_buffer.safe_appen...
+...                              ^
+/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/juliangee/side_projects/react_practice/calendar/app/views/appointments/index.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/appointments/index.html.erb:3: syntax error, unexpected '<'
+app/views/appointments/index.html.erb:4: unknown regexp option - h
+app/views/appointments/index.html.erb:4: unmatched close parenthesis: /h3> );@output_buffer.safe_append='
+app/views/appointments/index.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+app/views/appointments/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+app/views/appointments/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/appointments/index.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:51:17 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h2>Appointments</h2>
+    2: <% @appointments.each do |a| %>
+    3:   <h3><%= a.title %></h3>
+    4:   <h3><%= a.appt_time %></h3>
+    5: <% end %>
+  
+app/views/appointments/index.html.erb:2:in `_app_views_appointments_index_html_erb__1752661518940757231_70337834289300'
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:52:08 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4:   <h3><%= a.appt_time %></h3>
+    5: <% end %>
+    6: <h3>Make a new appointment</h3>
+    7: <% form_for @appointment do |f| %>
+    8:   <%= f.text_field :title %>
+    9:   <%= f.text_field :appt_time %>
+   10:   <%= f.submit 'Make appointment' %>
+  
+app/views/appointments/index.html.erb:7:in `_app_views_appointments_index_html_erb__1752661518940757231_70337819575940'
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:52:40 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  Rendered appointments/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4:   <h3><%= a.appt_time %></h3>
+    5: <% end %>
+    6: <h3>Make a new appointment</h3>
+    7: <% form_for @appointment do |f|
+    8:   f.text_field :title
+    9:   f.text_field :appt_time
+   10:   f.submit 'Make appointment'
+  
+app/views/appointments/index.html.erb:7:in `_app_views_appointments_index_html_erb__1752661518940757231_70337828241640'
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:54:58 -1000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:2
+  Rendered appointments/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 290ms (Views: 274.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:55:19 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:2
+  Rendered appointments/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:55:59 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:2
+  Rendered appointments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 10:58:32 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:8
+  Rendered appointments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 11:07:34 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:8
+  Rendered appointments/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2018-07-07 11:07:57 -1000
+Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VG2wTi2yTbfmZWpOAj1mQfKc7s+CpAyJYGpsXImxkOlrFyRE7/gZaG57Escuv8lV2ZpM3IQ9BAgFzCKQs5gCvw==", "appointment"=>{"title"=>"Meet Joe", "appt_time"=>"25 January 2017 11am"}, "commit"=>"Make appointment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/appointments_controller.rb:8
+  [1m[36mAppointment Create (0.5ms)[0m  [1m[32mINSERT INTO "appointments" ("title", "appt_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Meet Joe"], ["appt_time", "2017-01-25 11:00:00"], ["created_at", "2018-07-07 21:07:57.075278"], ["updated_at", "2018-07-07 21:07:57.075278"]]
+  ↳ app/controllers/appointments_controller.rb:8
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/appointments_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 11:07:57 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:8
+  Rendered appointments/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 11:08:06 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:8
+  Rendered appointments/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
