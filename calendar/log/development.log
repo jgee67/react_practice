@@ -312,3 +312,34 @@ Processing by AppointmentsController#index as HTML
 Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-07 11:51:13 -1000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/juliangee/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (13.5ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/index.html.erb:8
+  Rendered appointments/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 344ms (Views: 286.4ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 11:53:27 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/_appointments.html.erb:7
+  Rendered appointments/_appointments.html.erb (1.8ms)
+  Rendered appointments/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 11:53:28 -1000
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" ORDER BY "appointments"."appt_time" ASC[0m
+  ↳ app/views/appointments/_appointments.html.erb:7
+  Rendered appointments/_appointments.html.erb (15.0ms)
+  Rendered appointments/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
