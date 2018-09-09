@@ -1,9 +1,2 @@
-<h2>Appointments</h2>
-<%= form_for @appointment, remote: true do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :appt_time %>
-  <%= f.submit 'Make appointment' %>
-<% end %>
-<div id='appointments'>
-  <%= render 'appointments' %>
-</div>
+<%= tag(:div, id: 'appointments_data', data: @appointments.to_json) %>
+<%= javascript_pack_tag 'Appointments' %>
