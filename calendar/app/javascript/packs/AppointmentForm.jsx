@@ -50,6 +50,7 @@ export default class AppointmentForm extends React.Component {
           <input
             type='submit'
             value='Make Appointment'
+            className='submit-button'
           />
         </form>
       </div>
