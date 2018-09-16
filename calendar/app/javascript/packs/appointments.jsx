@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import update from 'immutability-helper'
 import AppointmentForm from './AppointmentForm'
-import AppointmentList from './AppointmentList'
+import { AppointmentList } from './AppointmentList'
 
 document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('appointments_data')
