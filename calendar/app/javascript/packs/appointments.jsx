@@ -16,14 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
 export default class Appointments extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      appointments: this.props.appointments,
+      title: 'Standup Meeting',
+      appt_time: '',
+    }
+  }
+
+  handleUserInput = (obj) => {
+    this.setState(obj)
   }
 
   render() {
     return (
       <div>
         <h1>Calendar</h1>
-        <AppointmentForm/>
-        <AppointmentList appointments={this.props.appointments}/>
+        <AppointmentForm
+          title={this.state.title}
+          appt_time={this.state.appt_time}
+          onUserInput={this.handleUserInput}
+        />
+        <AppointmentList
+          appointments={this.state.appointments}
+        />
       </div>
     );
   }
