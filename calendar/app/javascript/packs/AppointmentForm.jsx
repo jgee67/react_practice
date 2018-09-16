@@ -12,11 +12,16 @@ export default class AppointmentForm extends React.Component {
     this.props.onUserInput(obj);
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.onFormSubmit();
+  }
+
   render() {
     return (
       <div>
         <h2>Make a new Appointment</h2>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             name='title'
             placeholder='Appointment Title'

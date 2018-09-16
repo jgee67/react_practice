@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import update from 'immutability-helper'
 import AppointmentForm from './AppointmentForm'
 import AppointmentList from './AppointmentList'
 
@@ -27,6 +28,27 @@ export default class Appointments extends React.Component {
     this.setState(obj)
   }
 
+  handleFormSubmit = () => {
+    var appointment = {
+      title: this.state.title,
+      appt_time: this.state.appt_time
+    }
+    $.post('/appointments', {appointment: appointment}).done(
+      function(data){
+        this.addNewAppointment(data);
+      }.bind(this)
+    )
+  }
+
+  addNewAppointment(appointment) {
+    var appointments = update(this.state.appointments, {$push: [appointment]});
+    this.setState({
+      appointments: appointments.sort(function(a,b) {
+        return(new Date(a.appt_time) - new Date(b.appt_time));
+      })
+    });
+  }
+
   render() {
     return (
       <div>
@@ -35,6 +57,7 @@ export default class Appointments extends React.Component {
           title={this.state.title}
           appt_time={this.state.appt_time}
           onUserInput={this.handleUserInput}
+          onFormSubmit={this.handleFormSubmit}
         />
         <AppointmentList
           appointments={this.state.appointments}
